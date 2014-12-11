@@ -1,5 +1,32 @@
 [
   {
+    "id": "tools",
+    "children":
+    [
+      {
+        "id": "end"
+      },
+      {
+        "caption": "Html2jade",
+        "children":
+        [
+          {
+            "caption": "html2jade: Convert file",
+            "command": "html_to_jade_from_file"
+          },
+          {
+            "caption": "html2jade: Convert selection",
+            "command": "html_to_jade_from_selection"
+          },
+          {
+            "caption": "html2jade: Convert clipboard content",
+            "command": "html_to_jade_from_clipboard"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "mnemonic": "n",
     "caption": "Preferences",
     "id": "preferences",

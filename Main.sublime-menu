@@ -1,0 +1,38 @@
+[
+  {
+    "mnemonic": "n",
+    "caption": "Preferences",
+    "id": "preferences",
+    "children": [
+      {
+        "mnemonic": "P",
+        "caption": "Package Settings",
+        "id": "package-settings",
+        "children": [
+          {
+            "caption": "html2jade",
+            "children": [
+              {
+                "caption": "Settings – Default",
+                "args": {
+                  "file": "${packages}/html2jade/html2jade.sublime-settings"
+                },
+                "command": "open_file"
+              },
+              {
+                "caption": "Settings – User",
+                "args": {
+                  "file": "${packages}/User/html2jade.sublime-settings"
+                },
+                "command": "open_file"
+              },
+              {
+                "caption": "-"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

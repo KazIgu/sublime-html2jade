@@ -1,0 +1,5 @@
+[
+	{ "keys": ["super+shift+j"], "command": "html_to_jade_from_file"},
+  { "keys": ["super+j"], "command": "html_to_jade_from_selection"},
+  { "keys": ["super+ctrl+j"], "command": "html_to_jade_from_clipboard"}
+]

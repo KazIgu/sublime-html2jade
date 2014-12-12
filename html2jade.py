@@ -59,7 +59,7 @@ class HTHTools:
 		use_local = plugin_settings.get('use_local')
 		if use_local:
 			cmd = '''
-				html2jade --bodyless << EOF
+				html2jade --bodyless --donotencode<< EOF
 				%s
 			''' % html
 			cwd = None
@@ -67,7 +67,7 @@ class HTHTools:
 
 			hoge = Popen(cmd, env=env, cwd=cwd, stdout=PIPE, stderr=PIPE, shell=True)
 			hoge = hoge.communicate(input="".encode("utf8"))
-			hoge = hoge[0].decode('ascii')
+			hoge = hoge[0].decode('utf8')
 			return hoge
 
 		else:

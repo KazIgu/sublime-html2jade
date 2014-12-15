@@ -65,10 +65,10 @@ class HTHTools:
 			cwd = None
 			env = {"PATH": plugin_settings.get('binDir')}
 
-			hoge = Popen(cmd, env=env, cwd=cwd, stdout=PIPE, stderr=PIPE, shell=True)
-			hoge = hoge.communicate(input="".encode("utf8"))
-			hoge = hoge[0].decode('utf8')
-			return hoge
+			jade = Popen(cmd, env=env, cwd=cwd, stdout=PIPE, stderr=PIPE, shell=True)
+			jade = jade.communicate(input="".encode("utf8"))
+			jade = jade[0].decode('utf8')
+			return jade
 
 		else:
 			host = 'http://html2jade.aaron-powell.com/convert'
@@ -77,7 +77,7 @@ class HTHTools:
 			binary_data = data.encode('utf-8')
 			req = urllib.request.Request(host, binary_data)
 			response_stream = urllib.request.urlopen(req)
-			result = json.loads(response_stream.read().decode("utf-8"))
+			result = json.loads(response_stream.read().decode('utf-8'))
 
 			if result["jade"]:
 				result["jade"] = result["jade"].replace('html\n','')

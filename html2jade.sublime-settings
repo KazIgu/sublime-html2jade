@@ -1,4 +1,4 @@
 {
-  "use_local": false,
+  "use_local": true,
   "binDir": "/usr/local/bin"
 }

@@ -16,6 +16,20 @@ The "Packages" directory is located at:
 
         ~/Library/Application Support/Sublime Text 3/Packages/
 
+## Setting
+
+You have to set binDir.
+
+`Preferences > Package Settings > html2jade > Settings – User`
+
+Example
+
+    {
+      "binDir": "/Users/kazigu/.nodebrew/current/bin"
+    }
+
+If you don't know "binDir", you can use `which html2jade`
+
 
 ## Usage
 

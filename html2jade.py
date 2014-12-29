@@ -55,13 +55,12 @@ class HtmlToJadeFromClipboardCommand(sublime_plugin.TextCommand):
 class HTHTools:
 	@classmethod
 	def post_html_return_jade(self, html):
-		plugin_settings = sublime.load_settings('html2jade.sublime-settings')
 		cmd = '''
 			html2jade --bodyless --donotencode<< EOF
 			%s
 		''' % html
 		cwd = None
-		env = {"PATH": plugin_settings.get('binDir')}
+		env = {"PATH": settings.get('binDir')}
 
 		jade = Popen(cmd, env=env, cwd=cwd, stdout=PIPE, stderr=PIPE, shell=True)
 		jade = jade.communicate(input="".encode("utf8"))

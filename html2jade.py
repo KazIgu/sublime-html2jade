@@ -7,14 +7,9 @@ import sys
 import os
 from subprocess import Popen, PIPE
 
-
-settings = sublime.load_settings("html2jade.sublime-settings")
-
 class HtmlToJadeFromFileCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		source = self.view.file_name()
-		if source.endswith(".html"):
-			target = source.replace('.html', '.jade')
 		if source.endswith(".html"):
 			target = source + '.jade'
 		if target:
@@ -55,6 +50,7 @@ class HtmlToJadeFromClipboardCommand(sublime_plugin.TextCommand):
 class HTHTools:
 	@classmethod
 	def post_html_return_jade(self, html):
+		settings = sublime.load_settings("html2jade.sublime-settings")
 		cmd = '''
 			html2jade --bodyless --donotencode<< EOF
 			%s
